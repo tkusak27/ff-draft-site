@@ -1,12 +1,32 @@
+name: Python application
+
 on:
   push:
+    branches:
+      - main
+  pull_request:
     branches:
       - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - run: python app.py
-        
 
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r ff-draft-site/requirements.txt
+
+    - name: Run tests
+      run: |
+        cd ff-draft-site
+        python -m unittest discover
