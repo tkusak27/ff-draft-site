@@ -7,6 +7,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: flask run app.py
+      - run: python app.py
         
 
