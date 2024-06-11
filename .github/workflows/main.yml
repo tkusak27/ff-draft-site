@@ -1,7 +1,12 @@
-stages:
-  - test
+on:
+  push:
+    branches:
+      - main
 
-build_job:
-  stage: test
-  script:
-    - echo "In testing stage..."
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: flask run app.py
+        
+
