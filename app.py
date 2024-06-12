@@ -1,10 +1,8 @@
 # app.py
-from flask import Flask
 import streamlit as st
 
 def main():
-    st.header("Hello from streamlit!")
-    st.header("check")
+    st.success("WOOOO")
 
 if __name__ == "__main__":
     main()
