@@ -14,4 +14,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8080/tcp
 
 # Run app.py when the container launches
-CMD ["python", "app.py"]
+CMD ["streamlit", "run", "app.py"]
