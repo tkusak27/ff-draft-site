@@ -2,7 +2,7 @@
 import streamlit as st
 
 def main():
-    st.success("WOOOO")
+    st.title("Running!")
 
 if __name__ == "__main__":
     main()
