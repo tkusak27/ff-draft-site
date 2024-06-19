@@ -16,4 +16,4 @@ RUN pip install streamlit
 EXPOSE 8051/tcp
 
 # Run app.py when the container launches
-CMD ["streamlit", "run", "app.py"]
+CMD ["streamlit", "run", "app/app.py", "--server.port", "8051"]
