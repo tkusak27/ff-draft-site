@@ -1,4 +1,4 @@
 import streamlit as st
 
-def options():
+def text_to_number(str):
     pass

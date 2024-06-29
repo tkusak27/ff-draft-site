@@ -1,3 +1,5 @@
 [server]
+port = 8053
 
-port = 8051
+[client]
+showSidebarNavigation = false
