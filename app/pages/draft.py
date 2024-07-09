@@ -1,17 +1,20 @@
 import streamlit as st
+from scripts.read_df import read_df
+from utils.draftboard import Draftboard
+
 
 # Draftboard on top half
 with st.container(border=True):
-    st.subheader("Draftboard")
-    #st.markdown(f"{st.session_state['scoring_setting']}, {st.session_state['num_teams']} teams, pick #{st.session_state['draft_position']}")
-    with st.container(border=True):
-        st.text("ok")
+    draftboard = Draftboard()
+    draftboard.render_draftboard()        
+    
 
 bottom_cols = st.columns([1, 1])
 # Current team in bottom left quadrant
 with bottom_cols[0]:
     with st.container(border=True):
         st.subheader("Current Team")
+        st.dataframe(st.session_state["roster"])
 
 # Suggested pick in bottom right quadrant
 with bottom_cols[1]:
